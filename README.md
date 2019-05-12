@@ -20,4 +20,8 @@ Group Project Repository for SE-418.
 
 - Spring Cloud
 
-## Idea
+## Service Structure
+
+- Auth Server
+
+- ...
