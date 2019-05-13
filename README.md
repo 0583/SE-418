@@ -12,6 +12,10 @@ Group Project Repository for SE-418.
 
 - [Coding Style for Vue.js](CodingStandard/Coding-Style-for-Vue.md)
 
+- [Coding Style for TypeScript](CodingStandard/Coding-Style-for-TypeScript.md)
+
+- [Coding Style for Swift](CodingStandard/Coding-Style-for-Swift.md)
+
 ## Tech Stack
 
 ### Web Client
