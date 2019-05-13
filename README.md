@@ -14,7 +14,19 @@ Group Project Repository for SE-418.
 
 ## Tech Stack
 
+### Web Client
+
+- TypeScript
+
 - Vue.js
+
+### Mobile App Client
+
+- Swift + Objective-C
+
+- Java + Kotlin
+
+### Server
 
 - Spring Boot
 
