@@ -1,12 +1,13 @@
-# SE-418 · ![Build Status](http://94.191.27.99:8080/job/CI%20Service/badge/icon)
+# SE-418 · [![Build Status](http://94.191.27.99:8080/buildStatus/icon)](http://94.191.27.99:8080/buildStatus/icon)
 
 Group Project Repository for SE-418.
+
 
 ---
 
 ## CI Status
 
-![Build Status](http://94.191.27.99:8080/job/CI%20Service/badge/icon)
+[![Build Status](http://94.191.27.99:8080/buildStatus/icon)](http://94.191.27.99:8080/buildStatus/icon)
 
 ## Coding Standard
 
