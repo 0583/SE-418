@@ -4,6 +4,10 @@ Group Project Repository for SE-418.
 
 ---
 
+## CI Status
+
+... Badges here ...
+
 ## Coding Standard
 
 - [Coding Style for HTML&CSS](CodingStandard/Coding-Style-for-HTML&CSS.md)
