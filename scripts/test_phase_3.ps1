@@ -1,0 +1,3 @@
+/bin/echo "+ TEST PHASE #3 RUNNING +"
+
+/bin/echo "+ TEST PHASE #3 COMPLETED SUCCESSFULLY +"
