@@ -5,9 +5,16 @@ Group Project Repository for SE-418.
 
 ---
 
-## CI Status
+## Status
 
 [![Build Status](http://94.191.27.99:8080/buildStatus/icon)](http://94.191.27.99:8080/buildStatus/icon)
+
+![GitHub contributors](https://img.shields.io/github/contributors/0583/SE-418.svg?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/0583/SE-418.svg?color=green&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/0583/SE-418.svg?style=flat-square)
+
+![GitHub pull requests](https://img.shields.io/github/issues-pr/0583/SE-418.svg?style=flat-square)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/0583/SE-418.svg?style=flat-square)
 
 ## Coding Standard
 
@@ -44,3 +51,8 @@ Group Project Repository for SE-418.
 - Spring Cloud
 
 - Jenkins
+
+
+## License
+
+![GitHub](https://img.shields.io/github/license/0583/SE-418.svg?style=flat-square)
