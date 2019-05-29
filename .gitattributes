@@ -1,3 +1,3 @@
 *.md linguist-detectable=true
 
-/coding-standard/**.** linguist-detectable=false
+coding-standard/*.md linguist-generated=true
