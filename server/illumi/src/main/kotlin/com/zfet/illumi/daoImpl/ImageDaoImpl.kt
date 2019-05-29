@@ -1,8 +1,8 @@
-package com.zfet.illumi.implementation
+package com.zfet.illumi.daoImpl
 
 import com.zfet.illumi.dao.ImageDao
 import org.springframework.stereotype.Repository
 
 @Repository
-class ImageDaoImpl : ImageDao {
+open class ImageDaoImpl : ImageDao {
 }

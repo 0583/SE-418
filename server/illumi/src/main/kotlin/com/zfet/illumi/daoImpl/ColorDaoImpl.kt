@@ -1,8 +1,8 @@
-package com.zfet.illumi.implementation
+package com.zfet.illumi.daoImpl
 
 import com.zfet.illumi.dao.ColorDao
 import org.springframework.stereotype.Repository
 
 @Repository
-class ColorDaoImpl : ColorDao {
+open class ColorDaoImpl : ColorDao {
 }

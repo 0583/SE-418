@@ -1,8 +1,9 @@
-package com.zfet.illumi.implementation
+package com.zfet.illumi.daoImpl
 
 import com.zfet.illumi.dao.UserDao
 import org.springframework.stereotype.Repository
 
 @Repository
-class UserDaoImpl : UserDao {
+open class UserDaoImpl : UserDao {
+
 }

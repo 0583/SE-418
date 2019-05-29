@@ -1,8 +1,8 @@
-package com.zfet.illumi.implementation
+package com.zfet.illumi.daoImpl
 
 import com.zfet.illumi.dao.TagDao
 import org.springframework.stereotype.Repository
 
 @Repository
-class TagDaoImpl : TagDao {
+open class TagDaoImpl : TagDao {
 }
