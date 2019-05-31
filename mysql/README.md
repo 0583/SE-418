@@ -1,6 +1,11 @@
 # illumi_database
 
-* sql脚本：illumi_database.sql
+* 初始化数据库 
+
+`init_database.sql` 创建表
+
+`insert_data.sql` 灌入示例数据
+
   * user
     * username (primary)
     * password
@@ -15,18 +20,20 @@
     * imageid
     * tagid
 
-* color表尚未创建
+* color 表尚未创建
 
 * 脚本使用:
 
 ```
-source [pathname]/illumi_database.sql
+source [pathname]/init_database.sql
+
+source [pathname]/insert_data.sql
 ```
 
 * 其他：
 
-&emsp;&emsp;数据库中已存在的数据为测试用的假，可以访问
+  * 数据库中已存在的数据为测试用的假，可以访问
 
-&emsp;&emsp;user表中的信息可以用来 login
+  * user表中的信息可以用来 login
 
-&emsp;&emsp;register的新用户同样可以使用
+  * register的新用户同样可以使用
