@@ -13,6 +13,7 @@ Group Project Repository for SE-418.
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/0583/SE-418.svg?color=green&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/0583/SE-418.svg?style=flat-square)
 
+![GitHub issues](https://img.shields.io/github/issues/0583/SE-418.svg?style=flat-square)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/0583/SE-418.svg?style=flat-square)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/0583/SE-418.svg?style=flat-square)
 
