@@ -1,3 +1,4 @@
 *.sql linguist-detectable=true
 *.md linguist-detectable=true
 *.rtf linguist-detectable=true
+mysql/insert_data.sql linguist-generated=true
