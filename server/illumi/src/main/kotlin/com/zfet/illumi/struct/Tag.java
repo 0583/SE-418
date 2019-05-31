@@ -15,33 +15,37 @@ public class Tag {
     private String tagname;
     private List<Image> images;
 
-    public Tag(){}
+    public Tag() {
+    }
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name="tagid")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "tagid")
     public int getTagid() {
         return tagid;
     }
+
     public void setTagid(int tagid) {
-        this.tagid=tagid;
+        this.tagid = tagid;
     }
 
     @Basic
-    @Column(name="tagname", length=255)
+    @Column(name = "tagname", length = 255)
     public String getTagname() {
         return tagname;
     }
+
     public void setTagname(String tagname) {
-        this.tagname=tagname;
+        this.tagname = tagname;
     }
 
-    @ManyToMany(fetch=FetchType.LAZY, mappedBy="tags")
-    @JsonIgnoreProperties(value={"tags"})
-    public List<Image> getImages(){
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tags")
+    @JsonIgnoreProperties(value = {"tags"})
+    public List<Image> getImages() {
         return this.images;
     }
-    public void setImages(List<Image> images){
-        this.images=images;
+
+    public void setImages(List<Image> images) {
+        this.images = images;
     }
 }
