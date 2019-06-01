@@ -58,11 +58,29 @@ CREATE TABLE `tag`  (
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `password` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`username`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `user` (
+    `username` VARCHAR(255)CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NOT NULL,
+    `password` VARCHAR(32)CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    PRIMARY KEY (`username`) USING BTREE
+)  ENGINE=INNODB CHARACTER SET=UTF8 COLLATE = UTF8_GENERAL_CI ROW_FORMAT=DYNAMIC;
+
+
+-- ----------------------------
+-- Table structure for color
+-- ----------------------------
+DROP TABLE IF EXISTS `color`;
+CREATE TABLE `color` (
+    `colorname` VARCHAR(127)CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NOT NULL,
+    `coloralias` VARCHAR(127)CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    `r` int(3) UNSIGNED NOT NULL,
+    `g` int(3) UNSIGNED NOT NULL,
+    `b` int(3) UNSIGNED NOT NULL,
+    `c` int(3) UNSIGNED NOT NULL,
+    `m` int(3) UNSIGNED NOT NULL,
+    `y` int(3) UNSIGNED NOT NULL,
+    `k` int(3) UNSIGNED NOT NULL,
+    PRIMARY KEY (`colorname`) USING BTREE
+)  ENGINE=INNODB CHARACTER SET=UTF8 COLLATE = UTF8_GENERAL_CI ROW_FORMAT=DYNAMIC;
 
 
 SET FOREIGN_KEY_CHECKS = 1;
