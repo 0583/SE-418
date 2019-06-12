@@ -14,7 +14,18 @@
 		8A82BF5922B0A72300EE7602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82BF5722B0A72300EE7602 /* Main.storyboard */; };
 		8A82BF5B22B0A72700EE7602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A82BF5A22B0A72700EE7602 /* Assets.xcassets */; };
 		8A82BF5E22B0A72700EE7602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82BF5C22B0A72700EE7602 /* LaunchScreen.storyboard */; };
+		8A82BF6C22B0A85500EE7602 /* illumiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82BF6B22B0A85500EE7602 /* illumiTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A82BF6E22B0A85500EE7602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A82BF4422B0A72300EE7602 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A82BF4B22B0A72300EE7602;
+			remoteInfo = illumi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A82BF4C22B0A72300EE7602 /* illumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = illumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		8A82BF5A22B0A72700EE7602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A82BF5D22B0A72700EE7602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A82BF5F22B0A72700EE7602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A82BF6922B0A85500EE7602 /* illumiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = illumiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A82BF6B22B0A85500EE7602 /* illumiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = illumiTests.swift; sourceTree = "<group>"; };
+		8A82BF6D22B0A85500EE7602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8A82BF4922B0A72300EE7602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A82BF6622B0A85500EE7602 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				8A82BF4E22B0A72300EE7602 /* illumi */,
+				8A82BF6A22B0A85500EE7602 /* illumiTests */,
 				8A82BF4D22B0A72300EE7602 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				8A82BF4C22B0A72300EE7602 /* illumi.app */,
+				8A82BF6922B0A85500EE7602 /* illumiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +91,15 @@
 				8A82BF5F22B0A72700EE7602 /* Info.plist */,
 			);
 			path = illumi;
+			sourceTree = "<group>";
+		};
+		8A82BF6A22B0A85500EE7602 /* illumiTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A82BF6B22B0A85500EE7602 /* illumiTests.swift */,
+				8A82BF6D22B0A85500EE7602 /* Info.plist */,
+			);
+			path = illumiTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +122,24 @@
 			productReference = 8A82BF4C22B0A72300EE7602 /* illumi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8A82BF6822B0A85500EE7602 /* illumiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A82BF7022B0A85500EE7602 /* Build configuration list for PBXNativeTarget "illumiTests" */;
+			buildPhases = (
+				8A82BF6522B0A85500EE7602 /* Sources */,
+				8A82BF6622B0A85500EE7602 /* Frameworks */,
+				8A82BF6722B0A85500EE7602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A82BF6F22B0A85500EE7602 /* PBXTargetDependency */,
+			);
+			name = illumiTests;
+			productName = illumiTests;
+			productReference = 8A82BF6922B0A85500EE7602 /* illumiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +152,10 @@
 				TargetAttributes = {
 					8A82BF4B22B0A72300EE7602 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					8A82BF6822B0A85500EE7602 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 8A82BF4B22B0A72300EE7602;
 					};
 				};
 			};
@@ -119,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				8A82BF4B22B0A72300EE7602 /* illumi */,
+				8A82BF6822B0A85500EE7602 /* illumiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +186,13 @@
 				8A82BF5E22B0A72700EE7602 /* LaunchScreen.storyboard in Resources */,
 				8A82BF5B22B0A72700EE7602 /* Assets.xcassets in Resources */,
 				8A82BF5922B0A72300EE7602 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A82BF6722B0A85500EE7602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +210,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A82BF6522B0A85500EE7602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A82BF6C22B0A85500EE7602 /* illumiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A82BF6F22B0A85500EE7602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A82BF4B22B0A72300EE7602 /* illumi */;
+			targetProxy = 8A82BF6E22B0A85500EE7602 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8A82BF5722B0A72300EE7602 /* Main.storyboard */ = {
@@ -320,6 +398,44 @@
 			};
 			name = Release;
 		};
+		8A82BF7122B0A85500EE7602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = illumiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.0583.illumiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/illumi.app/illumi";
+			};
+			name = Debug;
+		};
+		8A82BF7222B0A85500EE7602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = illumiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.0583.illumiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/illumi.app/illumi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +453,15 @@
 			buildConfigurations = (
 				8A82BF6322B0A72700EE7602 /* Debug */,
 				8A82BF6422B0A72700EE7602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A82BF7022B0A85500EE7602 /* Build configuration list for PBXNativeTarget "illumiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A82BF7122B0A85500EE7602 /* Debug */,
+				8A82BF7222B0A85500EE7602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
