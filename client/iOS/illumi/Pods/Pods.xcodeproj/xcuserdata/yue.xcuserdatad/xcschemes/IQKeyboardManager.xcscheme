@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78B0645ACBF4869373A8E6BBCFAA7F63"
-               BuildableName = "Alamofire-SwiftyJSON.framework"
-               BlueprintName = "Alamofire-SwiftyJSON"
+               BlueprintIdentifier = "FBA456CB50E371584C11231929A0971E"
+               BuildableName = "IQKeyboardManager.framework"
+               BlueprintName = "IQKeyboardManager"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
