@@ -33,4 +33,8 @@ class LoginManager {
             }
         }
     }
+    
+    static func performLogout() {
+        // Do some logout issues
+    }
 }

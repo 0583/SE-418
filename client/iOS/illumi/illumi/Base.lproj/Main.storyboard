@@ -16,44 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="131.66666666666666" y="346.66666666666669" width="150.99999999999997" height="43"/>
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="109.66666666666667" y="397.66666666666669" width="194.66666666666663" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NT-JN-Zr8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                                 <items>
                                     <navigationItem title="Posted Images" id="kcO-B7-qZl">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="uoF-7s-kuz">
-                                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="no2-c4-5d8">
-                                                <rect key="frame" x="0.0" y="-1" width="113" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="All"/>
-                                                    <segment title="Mine"/>
-                                                </segments>
-                                            </segmentedControl>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="vDv-G9-ZzU"/>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="paO-IR-OD5"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9k0-0d-hnh">
+                                <rect key="frame" x="0.0" y="266" width="414" height="421"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-vF-8Pf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FTS-SA-4Pt">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTS-SA-4Pt" id="aqz-D4-TTD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xJS-vF-8Pf" firstAttribute="top" secondItem="9k0-0d-hnh" secondAttribute="top" id="09i-MI-21h"/>
+                                    <constraint firstAttribute="bottom" secondItem="xJS-vF-8Pf" secondAttribute="bottom" id="QH8-8x-viA"/>
+                                    <constraint firstAttribute="trailing" secondItem="xJS-vF-8Pf" secondAttribute="trailing" id="rt8-jz-hHE"/>
+                                    <constraint firstItem="xJS-vF-8Pf" firstAttribute="leading" secondItem="9k0-0d-hnh" secondAttribute="leading" id="tRM-QO-Y5v"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="9k0-0d-hnh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="27L-GC-mCA"/>
+                            <constraint firstItem="9k0-0d-hnh" firstAttribute="top" secondItem="2NT-JN-Zr8" secondAttribute="bottom" id="HYZ-rZ-Irk"/>
+                            <constraint firstItem="9k0-0d-hnh" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Npd-gN-Wye"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="OS4-Xe-En4"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="PyE-cg-Nej"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="9k0-0d-hnh" secondAttribute="bottom" id="l7r-rz-WSg"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="o47-cO-koz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -61,15 +66,8 @@
                     <tabBarItem key="tabBarItem" title="Posts" image="paperplane" catalog="system" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="hkQ-Sy-aOw">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="obB-nk-eRM"/>
-                    </items>
-                </navigationBar>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.38043478260875"/>
         </scene>
         <!--Me-->
         <scene sceneID="wg7-f3-ORb">
@@ -82,11 +80,18 @@
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16D-2J-Qlh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                 <items>
-                                    <navigationItem title="Me" id="Rps-Vb-cw1"/>
+                                    <navigationItem title="My Profile" id="Rps-Vb-cw1">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="stop" id="2OP-ad-gP5">
+                                            <connections>
+                                                <action selector="closePage:" destination="4Nw-L8-lE0" id="uME-rI-kBv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-da-Utk">
-                                <rect key="frame" x="20" y="116" width="144" height="144"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slowmo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-da-Utk">
+                                <rect key="frame" x="20" y="115.66666666666669" width="144" height="145"/>
+                                <color key="tintColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="uTp-mX-GGI"/>
                                     <constraint firstAttribute="width" constant="144" id="yTu-h8-zm4"/>
@@ -175,6 +180,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="person" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="QPh-da-Utk" id="bay-LE-4BH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +212,9 @@
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E17-o8-dJv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                 <items>
-                                    <navigationItem title="Upload Picture" id="XjX-3V-Rzh"/>
+                                    <navigationItem title="Upload Picture" id="XjX-3V-Rzh">
+                                        <barButtonItem key="rightBarButtonItem" title="Info" image="info.circle" catalog="system" style="plain" id="GnJ-pD-Gle"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -310,8 +320,9 @@ All rights reserved.</string>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGQ-7G-BYl">
-                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AGQ-7G-BYl">
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                                <color key="color" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -371,8 +382,10 @@ All rights reserved.</string>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="arrow.right.circle" catalog="system" width="64" height="62"/>
+        <image name="info.circle" catalog="system" width="64" height="62"/>
         <image name="paperplane" catalog="system" width="64" height="60"/>
         <image name="person" catalog="system" width="64" height="60"/>
         <image name="plus" catalog="system" width="64" height="58"/>
+        <image name="slowmo" catalog="system" width="64" height="62"/>
     </resources>
 </document>

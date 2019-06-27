@@ -16,6 +16,11 @@ class MainTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        NSLog("session over")
+        LoginManager.performLogout()
+    }
+    
 
     /*
     // MARK: - Navigation
