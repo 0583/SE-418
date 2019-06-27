@@ -1,6 +1,7 @@
 package com.zfet.illumi.controller;
 
 import com.zfet.illumi.service.UserService;
+import com.zfet.illumi.tool.PackTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
@@ -19,15 +20,18 @@ public class RegisterController{
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     @RequestMapping("/register")
-    public String register(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public Object register(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         String confirmPassword=request.getParameter("confirmPassword");
         String mes=userService.register(username, password, confirmPassword);
         if(mes.equals("Register Successfully!")){
+            /*
             redirectStrategy.sendRedirect(request, response, "/login.html");
+            */
+            return "{\"status\": \"ok\"}";
         }
-        return mes;
+        return "{\"status\": \"fail\"}";
     }
 
 }

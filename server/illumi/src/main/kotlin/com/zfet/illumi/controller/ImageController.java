@@ -6,6 +6,8 @@ import com.zfet.illumi.service.TagService;
 import com.zfet.illumi.service.UserService;
 import com.zfet.illumi.struct.Image;
 import com.zfet.illumi.struct.Tag;
+import com.zfet.illumi.tool.PackJson;
+import com.zfet.illumi.tool.PackTool;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -45,30 +47,63 @@ public class ImageController {
     @ResponseBody
     @GetMapping("/lookOneImage")
     public void getOneImage(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int id=Integer.valueOf(request.getParameter("id"));
-        Image image=imageService.lookOneImage(id);
-        char[] imageContent=image.getImagecontent();
-        response.setContentType("image/jpg");
         PrintWriter out=response.getWriter();
-        out.print(imageContent);
+        try{
+            int id=Integer.valueOf(request.getParameter("id"));
+            Image image=imageService.lookOneImage(id);
+            char[] imageContent=image.getImagecontent();
+            response.setContentType("image/jpg");
+            out.print(imageContent);
+        }catch(Exception err){
+            err.printStackTrace();
+            out.print("{\"status\": \"fail\"}");
+        }
+    }
+
+    @GetMapping("/getImageInfo")
+    public Object getImageInfo(int id){
+        try{
+            Image img=imageService.lookOneImage(id);
+            return PackTool.pack("ok", img);
+        }catch(Exception err){
+            err.printStackTrace();
+            return "{\"status\": \"fail\"}";
+        }
     }
 
     @GetMapping("/getImageByTag")
-    public List<Image> getImageByTag(int id){
-        return tagService.getImageByTag(id);
+    @ResponseBody
+    public Object getImageByTag(int id){
+        try{
+            List<Image> images=tagService.getImageByTag(id);
+            return PackTool.pack("ok", images);
+        }catch(Exception err){
+            err.printStackTrace();
+            return "{\"status\": \"fail\"}";
+        }
     }
 
     @GetMapping("/getImageByUsername")
-    public List<Image> getImageByUsername(String username){
-        return userService.getImageByUsername(username);
+    @ResponseBody
+    public Object getImageByUsername(String username){
+        try{
+            List<Image> images=userService.getImageByUsername(username);
+            return PackTool.pack("ok", images);
+        }catch(Exception err){
+            err.printStackTrace();
+            return "{\"status\": \"fail\"}";
+        }
     }
 
     @GetMapping("/getAllTag")
-    public List<Tag> getAllTag(){
-        return tagService.getAllTag();
+    public Object getAllTag(){
+        try{
+            List<Tag> tags=tagService.getAllTag();
+            return PackTool.pack("ok", tags);
+        }catch (Exception err){
+            err.printStackTrace();
+            return "{\"status\": \"fail\"}";
+        }
     }
 
-    public List<Image> getAllImages(){
-        return imageService.lookAllImage();
-    }
 }

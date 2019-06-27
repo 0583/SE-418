@@ -2,6 +2,7 @@ package com.zfet.illumi.struct;
 
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -44,7 +45,8 @@ public class IUser {
 
     @OneToMany(cascade={CascadeType.REMOVE},fetch=FetchType.LAZY,
             targetEntity = Image.class,mappedBy = "username")
-    @JsonIgnoreProperties(value={"user"})
+    @JsonIgnoreProperties(value={"username"})
+    @JsonIgnore
     public List<Image>getImages(){
         return this.images;
     }
