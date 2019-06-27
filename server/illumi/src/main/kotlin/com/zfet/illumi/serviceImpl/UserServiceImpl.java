@@ -3,10 +3,12 @@ package com.zfet.illumi.serviceImpl;
 import com.zfet.illumi.dao.UserDao;
 import com.zfet.illumi.service.UserService;
 import com.zfet.illumi.struct.IUser;
+import com.zfet.illumi.struct.Image;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -33,5 +35,11 @@ public class UserServiceImpl implements UserService {
                 return "Register Successfully!";
             return "System Error!";
         }
+    }
+
+    @Override
+    public List<Image> getImageByUsername(String username) {
+        IUser user=userDao.getOne(username);
+        return user.getImages();
     }
 }
