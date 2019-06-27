@@ -22,7 +22,7 @@ public class UserAuthenticationFailureHandler implements AuthenticationFailureHa
                                         AuthenticationException exception) throws IOException {
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         response.setContentType("application/json;charset=utf-8");
-        response.getWriter().write(mapper.writeValueAsString(exception.getMessage()));
+        response.getWriter().write("{\"status\": \"fail\"}"/*exception.getMessage()*/);
     }
 
 }
