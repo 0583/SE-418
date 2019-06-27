@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090078A012340C28A000B31E /* Pods_illumiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328BF9C600687982A6E721A4 /* Pods_illumiTests.framework */; };
+		0E26DEB7B397B4D5302FC19A /* Pods_illumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4A601C75101D2D142F1082 /* Pods_illumi.framework */; };
 		8A82BF5022B0A72300EE7602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82BF4F22B0A72300EE7602 /* AppDelegate.swift */; };
 		8A82BF5222B0A72300EE7602 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82BF5122B0A72300EE7602 /* SceneDelegate.swift */; };
 		8A82BF5422B0A72300EE7602 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82BF5322B0A72300EE7602 /* FirstViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CD377A3470A1669BA6C16D6 /* Pods-illumiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumiTests.debug.xcconfig"; path = "Target Support Files/Pods-illumiTests/Pods-illumiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		328BF9C600687982A6E721A4 /* Pods_illumiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_illumiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A82BF4C22B0A72300EE7602 /* illumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = illumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A82BF4F22B0A72300EE7602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A82BF5122B0A72300EE7602 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,10 @@
 		8A82BF6922B0A85500EE7602 /* illumiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = illumiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A82BF6B22B0A85500EE7602 /* illumiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = illumiTests.swift; sourceTree = "<group>"; };
 		8A82BF6D22B0A85500EE7602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB696BFF64C81CAA3579E79 /* Pods-illumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumi.debug.xcconfig"; path = "Target Support Files/Pods-illumi/Pods-illumi.debug.xcconfig"; sourceTree = "<group>"; };
+		C6242695364AD9B7E57B1149 /* Pods-illumiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumiTests.release.xcconfig"; path = "Target Support Files/Pods-illumiTests/Pods-illumiTests.release.xcconfig"; sourceTree = "<group>"; };
+		E257B71405CDCD6971688EFF /* Pods-illumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumi.release.xcconfig"; path = "Target Support Files/Pods-illumi/Pods-illumi.release.xcconfig"; sourceTree = "<group>"; };
+		FE4A601C75101D2D142F1082 /* Pods_illumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_illumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E26DEB7B397B4D5302FC19A /* Pods_illumi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090078A012340C28A000B31E /* Pods_illumiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				8A82BF4E22B0A72300EE7602 /* illumi */,
 				8A82BF6A22B0A85500EE7602 /* illumiTests */,
 				8A82BF4D22B0A72300EE7602 /* Products */,
+				A9EA83C09B630B2F621FDDB6 /* Pods */,
+				AD9D57CAC342B44ACE9F7E12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,27 @@
 			path = illumiTests;
 			sourceTree = "<group>";
 		};
+		A9EA83C09B630B2F621FDDB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AB696BFF64C81CAA3579E79 /* Pods-illumi.debug.xcconfig */,
+				E257B71405CDCD6971688EFF /* Pods-illumi.release.xcconfig */,
+				2CD377A3470A1669BA6C16D6 /* Pods-illumiTests.debug.xcconfig */,
+				C6242695364AD9B7E57B1149 /* Pods-illumiTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD9D57CAC342B44ACE9F7E12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE4A601C75101D2D142F1082 /* Pods_illumi.framework */,
+				328BF9C600687982A6E721A4 /* Pods_illumiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A82BF6222B0A72700EE7602 /* Build configuration list for PBXNativeTarget "illumi" */;
 			buildPhases = (
+				35DC134B54D85E1EBACAF2E2 /* [CP] Check Pods Manifest.lock */,
 				8A82BF4822B0A72300EE7602 /* Sources */,
 				8A82BF4922B0A72300EE7602 /* Frameworks */,
 				8A82BF4A22B0A72300EE7602 /* Resources */,
+				23885AA1BD48F8466100D0F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A82BF7022B0A85500EE7602 /* Build configuration list for PBXNativeTarget "illumiTests" */;
 			buildPhases = (
+				66534A83BF196502703C5F5C /* [CP] Check Pods Manifest.lock */,
 				8A82BF6522B0A85500EE7602 /* Sources */,
 				8A82BF6622B0A85500EE7602 /* Frameworks */,
 				8A82BF6722B0A85500EE7602 /* Resources */,
@@ -197,6 +233,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23885AA1BD48F8466100D0F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-illumi/Pods-illumi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-illumi/Pods-illumi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-illumi/Pods-illumi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35DC134B54D85E1EBACAF2E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-illumi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66534A83BF196502703C5F5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-illumiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A82BF4822B0A72300EE7602 /* Sources */ = {
@@ -364,6 +464,7 @@
 		};
 		8A82BF6322B0A72700EE7602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB696BFF64C81CAA3579E79 /* Pods-illumi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +484,7 @@
 		};
 		8A82BF6422B0A72700EE7602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E257B71405CDCD6971688EFF /* Pods-illumi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +504,7 @@
 		};
 		8A82BF7122B0A85500EE7602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD377A3470A1669BA6C16D6 /* Pods-illumiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -421,6 +524,7 @@
 		};
 		8A82BF7222B0A85500EE7602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6242695364AD9B7E57B1149 /* Pods-illumiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
