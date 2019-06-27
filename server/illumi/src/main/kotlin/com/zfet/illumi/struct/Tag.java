@@ -18,7 +18,7 @@ public class Tag {
     public Tag(){}
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="tagid")
     public int getTagid() {
         return tagid;
@@ -36,7 +36,7 @@ public class Tag {
         this.tagname=tagname;
     }
 
-    @ManyToMany(fetch=FetchType.LAZY, mappedBy="tags")
+    @ManyToMany(fetch=FetchType.EAGER, mappedBy="tags")
     @JsonIgnoreProperties(value={"tags"})
     public List<Image> getImages(){
         return this.images;

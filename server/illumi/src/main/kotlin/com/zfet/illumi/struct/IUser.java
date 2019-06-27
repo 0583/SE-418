@@ -44,6 +44,7 @@ public class IUser {
 
     @OneToMany(cascade={CascadeType.REMOVE},fetch=FetchType.EAGER,
             targetEntity = Image.class,mappedBy = "username")
+    @JsonIgnoreProperties(value={"user"})
     public List<Image>getImages(){
         return this.images;
     }
