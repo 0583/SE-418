@@ -12,7 +12,6 @@ import SwiftyJSON
 import Alamofire_SwiftyJSON
 
 class LoginManager {
-
     
     static func performLogin(userName: String,
                              passWord: String,

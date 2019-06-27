@@ -27,10 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DV-V5-pjS">
-                                <rect key="frame" x="183" y="307" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NT-JN-Zr8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                 <items>
@@ -242,7 +238,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="EF6-Qx-VqG">
-                                <rect key="frame" x="68" y="289" width="278" height="158.33333333333337"/>
+                                <rect key="frame" x="68" y="261.33333333333331" width="278" height="213.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="illumi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pv2-KK-cYT">
                                         <rect key="frame" x="93.333333333333343" y="0.0" width="91.333333333333343" height="44.333333333333336"/>
@@ -251,10 +247,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-1a-VZQ">
-                                        <rect key="frame" x="0.0" y="68.333333333333314" width="278" height="90"/>
+                                        <rect key="frame" x="0.0" y="68.333333333333371" width="278" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-XE-U0F">
-                                                <rect key="frame" x="1.3333333333333712" y="0.0" width="275.66666666666663" height="34"/>
+                                                <rect key="frame" x="1.3333333333333428" y="0.0" width="275.66666666666663" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-8c-dV7">
                                                         <rect key="frame" x="0.0" y="0.0" width="236" height="34"/>
@@ -304,15 +300,28 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOo-2j-gqZ">
+                                        <rect key="frame" x="38.666666666666671" y="182.33333333333337" width="200.66666666666663" height="31.333333333333343"/>
+                                        <string key="text">Copyright © 2019 “ZFET” Group.
+All rights reserved.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGQ-7G-BYl">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kRY-U6-5LC" firstAttribute="leading" secondItem="8C9-eW-hcZ" secondAttribute="leading" id="2Rm-N8-quv"/>
                             <constraint firstItem="EF6-Qx-VqG" firstAttribute="centerY" secondItem="P7b-XL-Was" secondAttribute="centerY" id="B5D-hy-8Qf"/>
+                            <constraint firstItem="AGQ-7G-BYl" firstAttribute="centerY" secondItem="P7b-XL-Was" secondAttribute="centerY" id="HDS-h3-OT5"/>
                             <constraint firstItem="kRY-U6-5LC" firstAttribute="trailing" secondItem="8C9-eW-hcZ" secondAttribute="trailing" id="Jya-Yu-Sei"/>
+                            <constraint firstItem="AGQ-7G-BYl" firstAttribute="centerX" secondItem="P7b-XL-Was" secondAttribute="centerX" id="UQB-dy-M2n"/>
                             <constraint firstItem="kRY-U6-5LC" firstAttribute="top" secondItem="8C9-eW-hcZ" secondAttribute="top" id="bXZ-fV-MvX"/>
                             <constraint firstItem="EF6-Qx-VqG" firstAttribute="centerX" secondItem="P7b-XL-Was" secondAttribute="centerX" id="i20-lU-8RK"/>
                         </constraints>
@@ -322,6 +331,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="loadingRing" destination="AGQ-7G-BYl" id="VXA-aY-Qqq"/>
                         <outlet property="loginButton" destination="pxd-wc-bQ1" id="mHg-6h-Sqc"/>
                         <outlet property="loginMainView" destination="P7b-XL-Was" id="rhV-41-7FF"/>
                         <outlet property="passWordTextField" destination="Gen-My-02E" id="8y3-B7-69X"/>

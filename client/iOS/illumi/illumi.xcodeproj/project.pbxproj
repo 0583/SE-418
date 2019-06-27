@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC451EA22C4F37D0095C457 /* Constants */,
-				8AC451E522C4E7400095C457 /* Login */,
+				8AC451E522C4E7400095C457 /* Network */,
 				8A0B001022C4B27100514389 /* Images */,
 				8A0B000722C4ABCA00514389 /* VC */,
 				8A82BF4F22B0A72300EE7602 /* AppDelegate.swift */,
@@ -140,12 +140,12 @@
 			path = illumiTests;
 			sourceTree = "<group>";
 		};
-		8AC451E522C4E7400095C457 /* Login */ = {
+		8AC451E522C4E7400095C457 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				8AC451E622C4E75C0095C457 /* LoginManager.swift */,
 			);
-			path = Login;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8AC451EA22C4F37D0095C457 /* Constants */ = {

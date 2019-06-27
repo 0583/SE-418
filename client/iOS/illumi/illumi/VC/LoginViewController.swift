@@ -18,9 +18,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var loadingRing: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        loadingRing.stopAnimating()
         
         userNameTextField.delegate = self
         passWordTextField.delegate = self
@@ -56,21 +60,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func goToNextPage() {
-        NSLog("Successfully Logged in!")
-        let destinationStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-        self.present(destinationViewController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.loadingRing.stopAnimating()
+            self.userNameTextField.isEnabled = true
+            self.passWordTextField.isEnabled = true
+            NSLog("Successfully Logged in!")
+            let destinationStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+            self.present(destinationViewController, animated: true, completion: nil)
+        }
 
     }
     
     func declareRetry(message: String) {
-        let controller = UIAlertController(title: "Failed to Login", message: "The server says “\(message)”. \nCheck your name and password, and try again.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        controller.addAction(okAction)
-        present(controller, animated: true, completion: nil)
-        
-        userNameTextField.isEnabled = true
-        passWordTextField.isEnabled = true
+        DispatchQueue.main.async {
+            self.loadingRing.stopAnimating()
+            let controller = UIAlertController(title: "Failed to Login", message: "The server says “\(message)”. \nCheck your name and password, and try again.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+            
+            self.userNameTextField.isEnabled = true
+            self.passWordTextField.isEnabled = true
+        }
     }
     
     @IBAction func checkButtonsValidation(_ sender: UITextField) {
@@ -93,16 +105,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     func loginTapped() {
+        
         if userNameTextField.text == "" || passWordTextField.text == "" {
             return
         }
+        
+        let userName = userNameTextField.text!
+        let passWord = passWordTextField.text!
+        
+        loadingRing.startAnimating()
+        
         userNameTextField.isEnabled = false
         passWordTextField.isEnabled = false
         
-        LoginManager.performLogin(userName: userNameTextField.text!,
-                                  passWord: passWordTextField.text!,
-                                  completionHandler: goToNextPage,
-                                  failureHandler: declareRetry)
+        
+        DispatchQueue.global().async {
+            LoginManager.performLogin(userName: userName,
+                                      passWord: passWord,
+                                      completionHandler: self.goToNextPage,
+                                      failureHandler: self.declareRetry)
+        }
     }
     
     /*
