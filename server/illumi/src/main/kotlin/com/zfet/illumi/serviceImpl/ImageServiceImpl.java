@@ -20,11 +20,6 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public List<Image> lookAllImage() {
-        return imageDao.getAll();
-    }
-
-    @Override
     public List<Image> lookImageHasTag(int id) {
         return null;
     }

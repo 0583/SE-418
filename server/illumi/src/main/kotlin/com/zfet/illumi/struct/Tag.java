@@ -38,7 +38,7 @@ public class Tag {
     }
 
     @ManyToMany(fetch=FetchType.LAZY, mappedBy="tags")
-    @JsonIgnoreProperties(value={"tags"})
+    @JsonIgnoreProperties(value={"tags", "username"})
     @JsonIgnore
     public List<Image> getImages(){
         return this.images;

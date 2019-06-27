@@ -46,7 +46,6 @@ public class Image {
 
     @Basic
     @Column(name="username")
-    @JsonIgnore
     public String getUsername() {
         return username;
     }
