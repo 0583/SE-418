@@ -40,6 +40,6 @@ public class LoginController {
     @GetMapping("/index")
     public Object login(Authentication authentication) {
         // return SecurityContextHolder.getContext().getAuthentication();
-        return authentication;
+        return "{\"status\": \"ok\"}";
     }
 }
