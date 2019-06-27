@@ -8,47 +8,40 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var loginMainView: UIView!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
     
     override func viewDidLoad() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         super.viewDidLoad()
         
+        userNameTextField.delegate = self
+        passWordTextField.delegate = self
         // Do any additional setup after loading the view.
     }
-    
-    @objc func keyboardWillShow(note: NSNotification) {
-        let info: NSDictionary = note.userInfo! as NSDictionary
-        let keyboardSize: CGSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect).size
-        let frame: CGRect = loginMainView.frame
-        let y = frame.origin.y + frame.size.height - self.view.frame.size.height - keyboardSize.height
-//        let animationDuration: TimeInterval = 0.30
-//        UIView.beginAnimations("ResizeView", context: nil)
-//        UIView.setAnimationDuration(animationDuration)
-        if y > 0 {
-            self.view.frame = CGRect(x: 0, y: -y, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        }
-//        UIView.commitAnimations()
-    }
-    
-    @objc func keyboardWillHide(note: NSNotification) {
-//        let animationDuration: TimeInterval = 0.30
-//        UIView.beginAnimations("ResizeView", context: nil)
-//        UIView.setAnimationDuration(animationDuration)
-        self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-//        UIView.commitAnimations()
-    }
+
 
     @IBAction func UITapped(_ sender: UITapGestureRecognizer) {
         // Objective-C style
         // [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil]
         UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passWordTextField.becomeFirstResponder()
+        } else if textField == passWordTextField {
+            loginTapped()
+        }
+        return true
+    }
+    
+    func loginTapped() {
+        userNameTextField.isEnabled = false
+        passWordTextField.isEnabled = false
     }
     
     /*
