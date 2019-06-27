@@ -69,7 +69,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
             self.present(destinationViewController, animated: true, completion: nil)
         }
-
     }
     
     func declareRetry(message: String) {
