@@ -15,7 +15,7 @@ class illumiUrl {
     static let loginPostUrl = "http://94.191.27.99:8086/login"
     
     // parameters: <None>
-    static let logoutPostUrl = "http://94.191.27.99:8086/login?logout"
+    static let logoutPostUrl = "http://94.191.27.99:8086/logout"
     
     // parameters:
     // id - picture's Id, Integer

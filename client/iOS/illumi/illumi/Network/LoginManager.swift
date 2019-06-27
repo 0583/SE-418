@@ -35,6 +35,7 @@ class LoginManager {
     }
     
     static func performLogout() {
-        // Do some logout issues
+        Alamofire.request(illumiUrl.logoutPostUrl,
+                          method: .post)
     }
 }
