@@ -6,6 +6,8 @@ import com.zfet.illumi.struct.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class TagDaoImpl implements TagDao {
 
@@ -15,5 +17,10 @@ public class TagDaoImpl implements TagDao {
     @Override
     public Tag getOne(int id) {
         return tagRepository.getOne(id);
+    }
+
+    @Override
+    public List<Tag> getAll() {
+        return tagRepository.findAll();
     }
 }

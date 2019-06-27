@@ -1,3 +1,5 @@
+
+/*
 package com.zfet.illumi.struct
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
@@ -35,3 +37,5 @@ public class Color {
         }
     }
 }
+
+        */

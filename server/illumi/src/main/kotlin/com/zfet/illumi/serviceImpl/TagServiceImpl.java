@@ -20,4 +20,9 @@ public class TagServiceImpl implements TagService {
         Tag tag=tagDao.getOne(id);
         return tag.getImages();
     }
+
+    @Override
+    public List<Tag> getAllTag() {
+        return tagDao.getAll();
+    }
 }

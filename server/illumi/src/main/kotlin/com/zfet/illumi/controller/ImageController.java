@@ -63,6 +63,11 @@ public class ImageController {
         return userService.getImageByUsername(username);
     }
 
+    @GetMapping("/getAllTag")
+    public List<Tag> getAllTag(){
+        return tagService.getAllTag();
+    }
+
     public List<Image> getAllImages(){
         return imageService.lookAllImage();
     }
