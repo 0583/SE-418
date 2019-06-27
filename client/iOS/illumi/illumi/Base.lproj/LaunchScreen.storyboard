@@ -25,30 +25,25 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-Se-aPU">
                                 <rect key="frame" x="172.33333333333334" y="357.66666666666669" width="69.333333333333343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="G5F-u4-RiU"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="illumi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-Bu-Vm9">
                                 <rect key="frame" x="161.33333333333334" y="300" width="91.333333333333343" height="57.666666666666686"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57.5" id="nLt-hh-Bbg"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="48"/>
                                 <color key="highlightedColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oq2-Bu-Vm9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="AOH-1T-TKF"/>
-                            <constraint firstItem="yJX-Se-aPU" firstAttribute="top" secondItem="oq2-Bu-Vm9" secondAttribute="bottom" id="MzR-dd-eht"/>
+                            <constraint firstItem="oq2-Bu-Vm9" firstAttribute="centerX" secondItem="XtV-pl-rJG" secondAttribute="centerX" id="4Wz-RF-v5n"/>
+                            <constraint firstItem="oq2-Bu-Vm9" firstAttribute="centerX" secondItem="yJX-Se-aPU" secondAttribute="centerX" id="5Pi-ri-MdD"/>
+                            <constraint firstItem="yJX-Se-aPU" firstAttribute="centerY" secondItem="XtV-pl-rJG" secondAttribute="centerY" id="Jhy-7E-tyT"/>
                             <constraint firstItem="XtV-pl-rJG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rtk-9G-Iyc"/>
                             <constraint firstAttribute="bottom" secondItem="XtV-pl-rJG" secondAttribute="bottom" id="S01-uT-9wj"/>
-                            <constraint firstItem="yJX-Se-aPU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="azp-4r-juH"/>
-                            <constraint firstItem="yJX-Se-aPU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kA8-Rl-7QN"/>
+                            <constraint firstItem="oq2-Bu-Vm9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="cFG-an-NZG"/>
+                            <constraint firstItem="yJX-Se-aPU" firstAttribute="top" secondItem="oq2-Bu-Vm9" secondAttribute="bottom" id="en7-L4-lGq"/>
                             <constraint firstItem="XtV-pl-rJG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nln-pj-GLl"/>
                             <constraint firstItem="XtV-pl-rJG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="plN-HH-b8Z"/>
                         </constraints>
