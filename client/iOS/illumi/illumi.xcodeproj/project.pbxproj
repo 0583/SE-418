@@ -20,6 +20,9 @@
 		8A82BF5B22B0A72700EE7602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A82BF5A22B0A72700EE7602 /* Assets.xcassets */; };
 		8A82BF5E22B0A72700EE7602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82BF5C22B0A72700EE7602 /* LaunchScreen.storyboard */; };
 		8A82BF6C22B0A85500EE7602 /* illumiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82BF6B22B0A85500EE7602 /* illumiTests.swift */; };
+		8AC451E722C4E75C0095C457 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC451E622C4E75C0095C457 /* LoginManager.swift */; };
+		8AC451E922C4F1170095C457 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC451E822C4F1170095C457 /* MainTabBarController.swift */; };
+		8AC451EC22C4F3900095C457 /* illumiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC451EB22C4F3900095C457 /* illumiUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		8A82BF6B22B0A85500EE7602 /* illumiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = illumiTests.swift; sourceTree = "<group>"; };
 		8A82BF6D22B0A85500EE7602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB696BFF64C81CAA3579E79 /* Pods-illumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumi.debug.xcconfig"; path = "Target Support Files/Pods-illumi/Pods-illumi.debug.xcconfig"; sourceTree = "<group>"; };
+		8AC451E622C4E75C0095C457 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		8AC451E822C4F1170095C457 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8AC451EB22C4F3900095C457 /* illumiUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = illumiUrl.swift; sourceTree = "<group>"; };
 		C6242695364AD9B7E57B1149 /* Pods-illumiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumiTests.release.xcconfig"; path = "Target Support Files/Pods-illumiTests/Pods-illumiTests.release.xcconfig"; sourceTree = "<group>"; };
 		E257B71405CDCD6971688EFF /* Pods-illumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-illumi.release.xcconfig"; path = "Target Support Files/Pods-illumi/Pods-illumi.release.xcconfig"; sourceTree = "<group>"; };
 		FE4A601C75101D2D142F1082 /* Pods_illumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_illumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,7 @@
 				8A0B000B22C4ABF100514389 /* MeViewController.swift */,
 				8A0B000A22C4ABF100514389 /* UploadViewController.swift */,
 				8A0B000E22C4AC3C00514389 /* LoginViewController.swift */,
+				8AC451E822C4F1170095C457 /* MainTabBarController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -110,6 +117,8 @@
 		8A82BF4E22B0A72300EE7602 /* illumi */ = {
 			isa = PBXGroup;
 			children = (
+				8AC451EA22C4F37D0095C457 /* Constants */,
+				8AC451E522C4E7400095C457 /* Network */,
 				8A0B001022C4B27100514389 /* Images */,
 				8A0B000722C4ABCA00514389 /* VC */,
 				8A82BF4F22B0A72300EE7602 /* AppDelegate.swift */,
@@ -129,6 +138,22 @@
 				8A82BF6D22B0A85500EE7602 /* Info.plist */,
 			);
 			path = illumiTests;
+			sourceTree = "<group>";
+		};
+		8AC451E522C4E7400095C457 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8AC451E622C4E75C0095C457 /* LoginManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8AC451EA22C4F37D0095C457 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8AC451EB22C4F3900095C457 /* illumiUrl.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A9EA83C09B630B2F621FDDB6 /* Pods */ = {
@@ -321,7 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A0B000F22C4AC3C00514389 /* LoginViewController.swift in Sources */,
+				8AC451EC22C4F3900095C457 /* illumiUrl.swift in Sources */,
 				8A0B000D22C4ABF100514389 /* MeViewController.swift in Sources */,
+				8AC451E922C4F1170095C457 /* MainTabBarController.swift in Sources */,
+				8AC451E722C4E75C0095C457 /* LoginManager.swift in Sources */,
 				8A0B000922C4ABD400514389 /* GalleryViewController.swift in Sources */,
 				8A0B000C22C4ABF100514389 /* UploadViewController.swift in Sources */,
 				8A82BF5022B0A72300EE7602 /* AppDelegate.swift in Sources */,
