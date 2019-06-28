@@ -8,33 +8,41 @@
 
 import Foundation
 
+
 class illumiUrl {
+    
+//    static let baseIp = "http://47.103.15.32:8086"
+    static let baseIp = "http://94.191.27.99:8086"
     // parameters:
     // username - Username, String
     // password - Password, String
-    static let loginPostUrl = "http://94.191.27.99:8086/login"
+    static let loginPostUrl = baseIp + "/login"
     
     // parameters: <None>
-    static let logoutPostUrl = "http://94.191.27.99:8086/logout"
+    static let logoutPostUrl = baseIp + "/logout"
     
     // parameters:
     // id - Image ID, Integer
-    static let imageGetUrl = "http://94.191.27.99:8086/lookOneImage"
+    static let imageGetUrl = baseIp + "/lookOneImage"
     
     // parameters:
     // id - Tag ID, Integer
-    static let imageByTagGetUrl = "http://94.191.27.99:8086/getImageByTag"
+    static let imageByTagGetUrl = baseIp + "/getImageByTag"
     
     // parameters:
     // username - Username, String
-    static let imageByUserGetUrl = "http://94.191.27.99:8086/getImageByUsername"
+    static let imageByUserGetUrl = baseIp + "/getImageByUsername"
+    
+//    // parameters:
+//    // id - Image ID, Integer
+//    static let tagByImageIdGetUrl = "http://94.191.27.99:8086/"
     
     // parameters:
     // id - Image ID, Integer
-    static let tagByImageIdGetUrl = "http://94.191.27.99:8086/"
+    static let imageInfoGetUrl = baseIp + "/getImageInfo"
     
     // parameters: <None>
-    static let tagAllGetUrl = "http://94.191.27.99:8086/getAllTag"
+    static let tagAllGetUrl = baseIp + "/getAllTag"
     
-    static let imagePostUrl = "http://94.191.27.99:8086/"
+    static let imagePostUrl = baseIp + "/"
 }

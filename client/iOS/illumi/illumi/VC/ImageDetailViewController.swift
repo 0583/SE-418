@@ -17,6 +17,8 @@ class ImageDetailViewController: UIViewController {
     
     var currentImage: illumiImage?
     
+    var existedImage: UIImage?
+    
     func promptError(_ title: String, _ message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -29,12 +31,17 @@ class ImageDetailViewController: UIViewController {
         
         headingLabel.title = "Image Post #\(currentImage?.imageId ?? -1)"
         
-        currentImage?.getImageContent(imageHandler: { image in
-            self.imageContentView.image = image
+        if existedImage == nil {
+            currentImage?.getImageContent(imageHandler: { image in
+                self.imageContentView.image = image
+                self.imageContentView.contentMode = .scaleAspectFit
+            }, errorHandler: { errStr in
+                self.promptError("Failed to Load Image", "The server reported an “\(errStr)” error.")
+            })
+        } else {
+            self.imageContentView.image = existedImage
             self.imageContentView.contentMode = .scaleAspectFit
-        }, errorHandler: { errStr in
-            self.promptError("Failed to Load Image", "The server reported an “\(errStr)” error.")
-        })
+        }
         
         currentImage?.getImageTags(tagsHandler: { tags in
             for tag in tags {

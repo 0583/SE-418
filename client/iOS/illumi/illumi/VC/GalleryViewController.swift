@@ -8,12 +8,8 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func showPickerView() {
-
     }
 }

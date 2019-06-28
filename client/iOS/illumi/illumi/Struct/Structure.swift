@@ -23,7 +23,7 @@ class illumiTag {
 class illumiImage {
     
     var imageId: Int
-
+    var author: String?
     
     init(ImageId: Int) {
         imageId = ImageId
@@ -34,9 +34,23 @@ class illumiImage {
         let getParams: Parameters = [
             "id": imageId
         ]
-        Alamofire.request(illumiUrl.tagByImageIdGetUrl, method: .get, parameters: getParams)
+        Alamofire.request(illumiUrl.imageInfoGetUrl, method: .get, parameters: getParams)
         .responseSwiftyJSON(completionHandler: { swiftyJSON in
-            
+            if swiftyJSON.value?.dictionaryValue["status"] == "ok" {
+                let author = swiftyJSON.value?["values"]["username"].stringValue
+                var tags: [illumiTag] = [illumiTag(TagId: -1, TagName: "author:\(author ?? "unknown")")]
+                for tag in (swiftyJSON.value?.dictionaryValue["values"]?.dictionaryValue["tags"]!.arrayValue)! {
+                    let id = tag["tagid"].int
+                    let name = tag["tagname"].string
+                    
+                    if id != nil && name != nil {
+                        tags.append(illumiTag(TagId: id!, TagName: name!))
+                    }
+                }
+                tagsHandler(tags)
+            } else {
+                errorHandler("Server reported an “\(swiftyJSON.value?.dictionaryValue["status"] ?? "unknown")” error")
+            }
         })
     }
     
