@@ -9,6 +9,8 @@ target 'illumi' do
   pod 'Alamofire'
   pod 'Alamofire-SwiftyJSON'
   pod 'IQKeyboardManager'
+  pod "TTGTagCollectionView"
+  pod 'ImagePicker'
 
   target 'illumiTests' do
     inherit! :search_paths

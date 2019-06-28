@@ -27,6 +27,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>“illumi” needs your permission to read your camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>“illumi” needs your permission to read your photo library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

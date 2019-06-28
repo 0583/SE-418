@@ -12,7 +12,7 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        TagManager.refreshTags()
         // Do any additional setup after loading the view.
     }
     
