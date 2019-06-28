@@ -15,7 +15,29 @@ class ImageDetailViewController: UIViewController {
     @IBOutlet weak var headingLabel: UINavigationItem!
     @IBOutlet weak var imageContentView: UIImageView!
     
+    @IBAction func saveToAlbum(_ sender: UIButton) {
+        if imageContentView.image == nil {
+            promptError("Save Failure", "Cannot Save \(headingLabel.title ?? "unknown") to Album")
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(imageContentView.image!, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafeRawPointer) {
+        if (error as NSError?) != nil {
+            promptError("Save Failure", "Cannot Save \(headingLabel.title ?? "unknown") to Album")
+        } else {
+            promptError("Done", "Successfully Saved \(headingLabel.title ?? "unknown") to Album")
+        }
+    }
+
+    
     var currentImage: illumiImage?
+    
+    var existedImage: UIImage?
+    
+    var existedTags: [String]?
+
     
     func promptError(_ title: String, _ message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -29,20 +51,29 @@ class ImageDetailViewController: UIViewController {
         
         headingLabel.title = "Image Post #\(currentImage?.imageId ?? -1)"
         
-        currentImage?.getImageContent(imageHandler: { image in
-            self.imageContentView.image = image
+        if existedImage == nil {
+            currentImage?.getImageContent(imageHandler: { image in
+                self.imageContentView.image = image
+                self.imageContentView.contentMode = .scaleAspectFit
+            }, errorHandler: { errStr in
+                self.promptError("Failed to Load Image", "The server reported an “\(errStr)” error.")
+            })
+        } else {
+            self.imageContentView.image = existedImage
             self.imageContentView.contentMode = .scaleAspectFit
-        }, errorHandler: { errStr in
-            self.promptError("Failed to Load Image", "The server reported an “\(errStr)” error.")
-        })
+        }
         
-        currentImage?.getImageTags(tagsHandler: { tags in
-            for tag in tags {
-                self.tagView.addTag(tag.tagName)
-            }
-        }, errorHandler: { errStr in
-            self.promptError("Failed to Load Tags", "The server reported an “\(errStr)” error.")
-        })
+        if existedTags == nil {
+            currentImage?.getImageTags(tagsHandler: { tags in
+                for tag in tags {
+                    self.tagView.addTag(tag.tagName)
+                }
+            }, errorHandler: { errStr in
+                self.promptError("Failed to Load Tags", "The server reported an “\(errStr)” error.")
+            })
+        } else {
+            tagView.addTags(existedTags!)
+        }
         
         tagView.numberOfLines = 1
         // Do any additional setup after loading the view.
