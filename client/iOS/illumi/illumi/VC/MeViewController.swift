@@ -23,7 +23,7 @@ class MeViewController: UIViewController {
         })
     }
     
-    @IBAction func tappedHere(_ sender: UIBarButtonItem) {
+    @IBAction func tappedHere(_ sender: UIButton) {
         let destinationStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "ImageDetailView") as! ImageDetailViewController
         destinationViewController.currentImage = illumiImage(ImageId: 1)

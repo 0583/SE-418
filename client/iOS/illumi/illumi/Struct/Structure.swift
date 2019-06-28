@@ -48,11 +48,11 @@ class illumiImage {
         
         Alamofire.request(illumiUrl.imageGetUrl, method: .get, parameters: getParams).response(completionHandler: { response in
             if response.data == nil {
-                errorHandler("Failed to request image #\(self.imageId). Status Code: \(response.response?.statusCode ?? -1)")
+                errorHandler("image #\(self.imageId) request error. (- \(response.response?.statusCode ?? -1))")
             } else {
                 let img = UIImage(data: response.data!)
                 if img == nil {
-                    errorHandler("Failed to decode image #\(self.imageId). Status Code: \(response.response?.statusCode ?? -1)")
+                    errorHandler("image #\(self.imageId) decode error. (- \(response.response?.statusCode ?? -1))")
                 } else {
                     imageHandler(img!)
                 }

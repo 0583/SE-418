@@ -57,7 +57,12 @@ class UploadViewController: UIViewController, ImagePickerDelegate {
     }
     
     @IBAction func pickAnImage(_ sender: UIButton) {
-        let imagePickerController = ImagePickerController()
+        let configuration = Configuration()
+        configuration.doneButtonTitle = "Upload"
+        configuration.noImagesTitle = "There's no image here!"
+        configuration.recordLocation = false
+        
+        let imagePickerController = ImagePickerController(configuration: configuration)
         imagePickerController.imageLimit = 1
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)

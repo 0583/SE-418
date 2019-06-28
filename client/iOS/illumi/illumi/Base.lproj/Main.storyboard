@@ -143,10 +143,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="tappedHere:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Yij-b5-abd"/>
+                                                </connections>
                                             </button>
-                                            <connections>
-                                                <action selector="tappedHere:" destination="8rJ-Kc-sve" id="K91-in-oyt"/>
-                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="stop" id="2OP-ad-gP5">
                                             <connections>
