@@ -62,9 +62,9 @@
             filePath = "illumi/VC/MeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "closePage(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "tappedHere(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Alamofire_SwiftyJSON
 
 class illumiTag {
     var tagId: Int
@@ -30,7 +31,13 @@ class illumiImage {
     
     func getImageTags(tagsHandler: @escaping ([illumiTag]) -> (),
                       errorHandler: @escaping (String) -> ()) {
-        
+        let getParams: Parameters = [
+            "id": imageId
+        ]
+        Alamofire.request(illumiUrl.tagByImageIdGetUrl, method: .get, parameters: getParams)
+        .responseSwiftyJSON(completionHandler: { swiftyJSON in
+            
+        })
     }
     
     func getImageContent(imageHandler: @escaping (UIImage) -> (),

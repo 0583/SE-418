@@ -13,6 +13,8 @@ import Alamofire_SwiftyJSON
 
 class LoginManager {
     
+    static var currentUserName: String?
+    
     static func performLogin(userName: String,
                              passWord: String,
                              completionHandler: @escaping () -> (),
@@ -28,6 +30,7 @@ class LoginManager {
                           parameters: loginParams).responseSwiftyJSON { responseJSON in
             if responseJSON.value?["status"].stringValue == "ok" {
                 completionHandler()
+                LoginManager.currentUserName = userName
             } else {
                 failureHandler(responseJSON.value?["status"].string ?? "network error")
             }
@@ -37,5 +40,9 @@ class LoginManager {
     static func performLogout() {
         Alamofire.request(illumiUrl.logoutPostUrl,
                           method: .post)
+            .response(completionHandler: { _ in
+                // Clear Cached Username
+                LoginManager.currentUserName = nil
+            })
     }
 }

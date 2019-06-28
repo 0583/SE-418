@@ -11,7 +11,7 @@ import UIKit
 class MeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userNameField.text = LoginManager.currentUserName ?? "[Not Login]"
         ImageLoader.loadImageById(id: 1, imageHandler: { image in
             self.avatarImage.contentMode = .scaleToFill
             self.avatarImage.image = image
@@ -23,6 +23,14 @@ class MeViewController: UIViewController {
         })
     }
     
+    @IBAction func tappedHere(_ sender: UIBarButtonItem) {
+        let destinationStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "ImageDetailView") as! ImageDetailViewController
+        destinationViewController.currentImage = illumiImage(ImageId: 1)
+        self.present(destinationViewController, animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var userNameField: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
     
     @IBAction func closePage(_ sender: UIButton) {

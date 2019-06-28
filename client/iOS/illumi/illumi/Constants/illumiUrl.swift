@@ -18,14 +18,23 @@ class illumiUrl {
     static let logoutPostUrl = "http://94.191.27.99:8086/logout"
     
     // parameters:
-    // id - picture's Id, Integer
+    // id - Image ID, Integer
     static let imageGetUrl = "http://94.191.27.99:8086/lookOneImage"
     
     // parameters:
-    // id - Tag's Id, Integer
+    // id - Tag ID, Integer
     static let imageByTagGetUrl = "http://94.191.27.99:8086/getImageByTag"
     
     // parameters:
     // username - Username, String
     static let imageByUserGetUrl = "http://94.191.27.99:8086/getImageByUsername"
+    
+    // parameters:
+    // id - Image ID, Integer
+    static let tagByImageIdGetUrl = "http://94.191.27.99:8086/"
+    
+    // parameters: <None>
+    static let tagAllGetUrl = "http://94.191.27.99:8086/getAllTag"
+    
+    static let imagePostUrl = "http://94.191.27.99:8086/"
 }
