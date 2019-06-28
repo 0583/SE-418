@@ -31,7 +31,11 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="paO-IR-OD5"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="paO-IR-OD5">
+                                            <connections>
+                                                <action selector="refreshTapped:" destination="W5J-7L-Pyd" id="Qgz-qO-SvE"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -146,7 +150,13 @@
                                     <constraint firstAttribute="height" constant="96" id="Zcm-uN-Bxm"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Heading Line" id="iOM-1N-0iJ"/>
+                                    <navigationItem title="Heading Line" id="iOM-1N-0iJ">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="RUL-rY-RUc">
+                                            <connections>
+                                                <action selector="saveToAlbum:" destination="hsF-e9-0FR" id="fcU-LZ-4m3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slowmo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nii-YU-RVy">
@@ -358,6 +368,9 @@
                     <tabBarItem key="tabBarItem" title="Me" image="person" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="avatarImage" destination="QPh-da-Utk" id="bay-LE-4BH"/>
+                        <outlet property="lineLabelA" destination="8ZK-GH-KfY" id="vMd-MQ-rlB"/>
+                        <outlet property="lineLabelB" destination="t86-QP-7Tu" id="rBT-uX-RYO"/>
+                        <outlet property="lineLabelC" destination="2Th-pq-sDP" id="WKj-jD-crh"/>
                         <outlet property="meTableView" destination="r1F-zz-Q9u" id="X1q-qo-LSL"/>
                         <outlet property="userNameField" destination="H1w-d2-G9V" id="XgC-Ky-7Zy"/>
                     </connections>

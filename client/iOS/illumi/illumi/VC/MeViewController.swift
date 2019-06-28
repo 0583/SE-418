@@ -21,6 +21,10 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     @IBOutlet weak var meTableView: UITableView!
     
+    @IBOutlet weak var lineLabelA: UILabel!
+    @IBOutlet weak var lineLabelB: UILabel!
+    @IBOutlet weak var lineLabelC: UILabel!
+    
     func promptError(_ title: String, _ message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -34,6 +38,9 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         meTableView.delegate = self
         meTableView.dataSource = self
         
+        lineLabelA.text = RandomGenerator.getRandomMoods()
+        lineLabelB.text = RandomGenerator.getRandomWords()
+        
         userNameField.text = "@" + (LoginManager.currentUserName ?? "[Not Login]")
         
         refreshHeadlines()
@@ -43,7 +50,9 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         if LoginManager.currentUserName == nil {
             promptError("Bad Authentication", "You're not logged in now.")
             dismiss(animated: true, completion: nil)
+            return
         }
+        lineLabelC.text = ""
         ImageLoader.loadImageByUser(userName: LoginManager.currentUserName!,
                                    completionHandler: { images in
                                     for img in images {
@@ -57,6 +66,7 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
                                                     tags: tagsStr,
                                                     image: image,
                                                     imageId: img.imageId))
+                                                self.lineLabelC.text = "Loaded his/her \(self.headlines.count) posts"
                                                 self.meTableView.reloadData()
                                             },
                                                              errorHandler: { errMsg in
@@ -108,6 +118,7 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         let destinationStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "ImageDetailView") as! ImageDetailViewController
         destinationViewController.currentImage = illumiImage(ImageId: imageId)
+        destinationViewController.existedTags = headlines[indexPath.row].tags
         self.present(destinationViewController, animated: true, completion: nil)
     }
     

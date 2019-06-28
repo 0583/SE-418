@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 import TTGTagCollectionView
 
 struct Headline {
     var titleLabel: String
     var tags: [String]
     var image: UIImage
-    
     var imageId: Int
 }
 
@@ -85,7 +85,12 @@ class ImageTableViewController: UIViewController, UITableViewDataSource, UITable
     var headlines: [Headline] = []
     var selectedTag: Int = 1
     
+    @IBAction func refreshTapped(_ sender: UIButton) {
+        refreshHeadlines()
+    }
+    
     func refreshHeadlines() {
+
         headlines.removeAll()
         postImageTableView.reloadData()
         ImageLoader.loadImageByTag(tagId: selectedTag,
@@ -133,6 +138,7 @@ class ImageTableViewController: UIViewController, UITableViewDataSource, UITable
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "ImageDetailView") as! ImageDetailViewController
         destinationViewController.currentImage = illumiImage(ImageId: imageId)
         destinationViewController.existedImage = imageObject
+        destinationViewController.existedTags = headlines[indexPath.row].tags
         self.present(destinationViewController, animated: true, completion: nil)
     }
 
@@ -145,7 +151,7 @@ class ImageTableViewController: UIViewController, UITableViewDataSource, UITable
         cell.tagViewField.removeAllTags()
         cell.tagViewField.addTags(headline.tags)
         cell.imageField.image = headline.image
-        
+
         return cell
     }
 
