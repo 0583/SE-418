@@ -11,8 +11,8 @@ import Foundation
 
 class illumiUrl {
     
-//    static let baseIp = "http://47.103.15.32:8086"
-    static let baseIp = "http://94.191.27.99:8086"
+    static let baseIp = "http://47.103.15.32:8086"
+//    static let baseIp = "http://94.191.27.99:8086"
     // parameters:
     // username - Username, String
     // password - Password, String
@@ -33,8 +33,9 @@ class illumiUrl {
     // username - Username, String
     static let imageByUserGetUrl = baseIp + "/getImageByUsername"
     
-//    // parameters:
-//    // id - Image ID, Integer
+    // [deprecated]
+    // parameters:
+    // id - Image ID, Integer
 //    static let tagByImageIdGetUrl = "http://94.191.27.99:8086/"
     
     // parameters:
