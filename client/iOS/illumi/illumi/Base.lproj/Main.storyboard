@@ -54,12 +54,12 @@
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9k0-0d-hnh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="27L-GC-mCA"/>
-                            <constraint firstItem="9k0-0d-hnh" firstAttribute="top" secondItem="2NT-JN-Zr8" secondAttribute="bottom" id="HYZ-rZ-Irk"/>
                             <constraint firstItem="9k0-0d-hnh" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Npd-gN-Wye"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="OS4-Xe-En4"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="PyE-cg-Nej"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="9k0-0d-hnh" secondAttribute="bottom" id="l7r-rz-WSg"/>
                             <constraint firstItem="2NT-JN-Zr8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="o47-cO-koz"/>
+                            <constraint firstItem="9k0-0d-hnh" firstAttribute="top" secondItem="2NT-JN-Zr8" secondAttribute="bottom" id="qgM-F7-ftO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -68,6 +68,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.38043478260875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="chF-Zp-iHw">
+            <objects>
+                <viewController id="3QK-FN-5v9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xQn-Yw-t2T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-A6-R7d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                <items>
+                                    <navigationItem title="Image Post #1" id="iOM-1N-0iJ"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nii-YU-RVy">
+                                <rect key="frame" x="0.0" y="175" width="414" height="561"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aiu-A6-R7d" firstAttribute="leading" secondItem="iDh-e9-PnT" secondAttribute="leading" id="7Ql-1c-P5V"/>
+                            <constraint firstItem="aiu-A6-R7d" firstAttribute="trailing" secondItem="iDh-e9-PnT" secondAttribute="trailing" id="U15-wB-yIC"/>
+                            <constraint firstItem="aiu-A6-R7d" firstAttribute="top" secondItem="iDh-e9-PnT" secondAttribute="top" id="kAi-uT-2WJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iDh-e9-PnT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsF-e9-0FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676.8115942028987" y="-320.38043478260875"/>
         </scene>
         <!--Me-->
         <scene sceneID="wg7-f3-ORb">
